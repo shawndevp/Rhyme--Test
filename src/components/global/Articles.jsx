@@ -10,8 +10,9 @@ function Articles({article}) {
             <div className="article-flex-2">
             <h3>Author :<br/>{article.attributes.author}</h3> 
             <h3>Title : <br/>{article.attributes.title}</h3>
-            Description : {article.attributes.description}<br/><br/><br/>
+            Description : {article.attributes.description}
             </div>
+            <button>Delete article</button>
         </div>
         </>
     )

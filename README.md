@@ -1,3 +1,25 @@
+## Manual ## 
+
+To access strapi you need to open rhyme-project in interigated terminal and run 
+-> npm run develop 
+
+localhost for strapi/backend/headlessCMS is 
+localhost:1337
+
+login is :
+
+Email : Shawn.ornerstedt99@hotmail.com
+Password : Lolzzz123
+
+## mandatory NPMS ## 
+open rhyme-test in  interigated terminal and run 
+
+npm i node-modules
+npm i node-sass
+npm i react-router-dom
+npm i axios
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
