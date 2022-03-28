@@ -1,8 +1,25 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
+import server from "./Config";
 
 function Articles({article}) {
+    const [loading, setLoading] = useState(true);
+    const [articles, setArticle] = useState([]);
 
+    function deleteArticle(e) {
+        e.preventDefault();      
+
+          const deletePickedArticle = async () => {
+            const response = await axios.delete(
+              `${server}/api/Articles/${article.id}`,
+              {}
+            )
+            console.log(response)
+          }
+          deletePickedArticle();
+        }
+        
+        console.log(article.id)
     console.log(article)
     return (
         <>
@@ -12,7 +29,7 @@ function Articles({article}) {
             <h3>Title : <br/>{article.attributes.title}</h3>
             Description : {article.attributes.description}
             </div>
-            <button>Delete article</button>
+            <button onClick={deleteArticle}>Delete article</button>
         </div>
         </>
     )

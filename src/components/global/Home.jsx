@@ -32,24 +32,7 @@ function Home() {
 
   const { loading, articles } = useGetArticles();
 
-  function deleteArticle(e) {
-    e.preventDefault();
-    if(!loading && articles.data !== 0) {
 
-      const articleId = articles.data;
-      console.log(articleId);
-
-      //will not be able to finish due to time but should get the ID of the specific "row" and then delete it on a "onClick" with deleteArticle as a function. 
-      
-      const deletePickedArticle = async () => {
-        const response = await axios.delete(
-          `${server}/api/Articles/${articleId}`,
-          {}
-        )
-      }
-      deletePickedArticle();
-    }
-    }
 
 
 
