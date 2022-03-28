@@ -1,45 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
-import server from "./Config";
-import Home from "./Home";
 
-function Articles() {
-  const useGetArticles = () => {
-    const [loading, setLoading] = useState(true);
-    const [article, setArticle] = useState([]);
+function Articles({article}) {
 
-    const getArticle = async () => {
-      try {
-        const response = await axios.get(`${server}/api/Articles`);
-        console.log(response)
-        setArticle(response.data);
-      } catch (err) {
-        console.log(err);
-      }
-      setLoading(false);
-    };
-
-    useEffect(() => {
-      getArticle();
-    }, []);
-
-    return {
-      loading,
-      article,
-    };
-  };
-
-  const { loading, article } = useGetArticles();
-
-  return (
-    <>
-      {!loading ? (
-        <Home hasArticle={article.hasArticle} />
-      ) : (
-        <></>
-      )}
-    </>
-  );
+    console.log(article)
+    return (
+        <>
+        <div className="article-flex">
+            <div className="article-flex-2">
+            <h3>Author :<br/>{article.attributes.author}</h3> 
+            <h3>Title : <br/>{article.attributes.title}</h3>
+            Description : {article.attributes.description}<br/><br/><br/>
+            </div>
+        </div>
+        </>
+    )
 }
 
-export default Articles;
+export default Articles
