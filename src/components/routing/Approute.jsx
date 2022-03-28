@@ -4,7 +4,6 @@ import React from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "../global/Home";
 
-
 //routing all the imported components and also external page links
 function AppRoute() {
   return (
@@ -16,7 +15,7 @@ function AppRoute() {
             path="*"
             element={
               <div>
-                  <p>404 NOT FOUND!</p>
+                <p>404 NOT FOUND!</p>
               </div>
             }
           />
