@@ -1,5 +1,5 @@
 // Enviromental server configs should be placed here.
 
-const server = "http://YOUR-DOMAIN"
+const server = "http://localhost:1337";
 
 export default server
